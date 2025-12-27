@@ -1,40 +1,43 @@
-import React from 'react';
+import React from "react";
 
 export default function GrainBackground() {
   return (
-    <div className="relative min-h-screen overflow-hidden" style={{ backgroundColor: '#f3f3f3' }}>
+    <div
+      className="relative min-h-screen overflow-hidden"
+      style={{ backgroundColor: "#ffffff" }}
+    >
       {/* Heavy grain texture - Dark variant */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E")`,
           opacity: 0.15,
-          mixBlendMode: 'darken'
+          mixBlendMode: "darken",
         }}
       />
-      
+
       {/* Medium grain layer */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain2'%3E%3CfeTurbulence type='turbulence' baseFrequency='1.2' numOctaves='3' seed='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain2)' opacity='0.4'/%3E%3C/svg%3E")`,
           opacity: 0.12,
-          mixBlendMode: 'multiply'
+          mixBlendMode: "multiply",
         }}
       />
-      
+
       {/* Fine detailed grain */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain3'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.5' numOctaves='5' seed='10'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain3)' opacity='0.35'/%3E%3C/svg%3E")`,
           opacity: 0.1,
-          mixBlendMode: 'overlay'
+          mixBlendMode: "overlay",
         }}
       />
-      
+
       {/* Extra contrast grain layer */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background: `
@@ -53,17 +56,17 @@ export default function GrainBackground() {
               rgba(0,0,0,0.01) 2px
             )
           `,
-          opacity: 0.15
+          opacity: 0.15,
         }}
       />
-      
+
       {/* Noise pattern for visible grain */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence baseFrequency='3' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.6'/%3E%3C/svg%3E")`,
           opacity: 0.18,
-          mixBlendMode: 'multiply'
+          mixBlendMode: "multiply",
         }}
       />
     </div>

@@ -90,7 +90,7 @@ export default function TopBar() {
             className={`
     transition-all duration-150
     whitespace-nowrap text-center
-    text-[30px] leading-[1.3]
+    text-[14px] leading-[1.3]
     ${fade ? "opacity-0 translate-y-1" : "opacity-100 translate-y-0"}
     ${messages[index].font}
   `}

@@ -83,18 +83,17 @@ export default function TopBar() {
         </button>
 
         {/* TEXT */}
-        <div className="flex w-full items-center justify-center px-10 overflow-hidden">
+        <div className="flex w-full h-[35px] items-center justify-center px-10 overflow-hidden">
           <span
             className={`
     transition-opacity duration-200
-    text-[14px] leading-[35px]
+    text-[14px] leading-[21px]
     tracking-[0.035em]
     text-center
     whitespace-nowrap
     inline-block
     ${fade ? "opacity-0" : "opacity-100"}
     ${messages[index].font}
-    animate-scroll-mobile
   `}
           >
             {messages[index].content}

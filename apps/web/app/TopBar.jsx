@@ -63,7 +63,7 @@ export default function TopBar() {
 
   return (
     <div
-      className="relative w-full h-[40px] overflow-hidden"
+      className="relative w-full h-[30px] overflow-hidden flex items-center"
       style={{ backgroundColor: "#7a12fa", color: "#ffffff" }}
     >
       {/* GRAIN */}

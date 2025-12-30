@@ -85,7 +85,7 @@ export default function TopBar() {
         {/* TEXT */}
         <div className="relative flex items-center flex-1 px-4 min-w-0 overflow-hidden">
           <span
-  className={`
+            className={`
     transition-opacity duration-200
     text-[14px] leading-[30px]
     text-center
@@ -95,8 +95,9 @@ export default function TopBar() {
     ${messages[index].font}
     animate-scroll-mobile
   `}
->
-</span>
+          >
+            {messages[index].content}
+          </span>
         </div>
 
         {/* RIGHT */}

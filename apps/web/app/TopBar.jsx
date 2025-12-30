@@ -61,7 +61,7 @@ export default function TopBar() {
 
   return (
     <div
-      className="relative w-full min-h-[40px] py-[6px] overflow-hidden"
+      className="relative w-full min-h-[40px] py-[8px] overflow-hidden"
       style={{ backgroundColor: "#7a12fa", color: "#ffffff" }}
     >
       {/* GRAIN */}
@@ -73,26 +73,26 @@ export default function TopBar() {
         }}
       />
 
-      <div className="relative z-10 grid grid-cols-[32px_1fr_32px] items-center">
+      <div className="relative z-10 flex items-center justify-between px-2 gap-2">
         {/* LEFT */}
         <button
           onClick={() => change("prev")}
-          className="flex items-center justify-center hover:opacity-70"
+          className="flex items-center justify-center hover:opacity-70 flex-shrink-0 w-8 h-8"
         >
           <ArrowLeft />
         </button>
 
         {/* TEXT */}
-        <div className="flex items-center justify-center px-2">
+        <div className="flex items-center justify-center flex-1 px-4 min-w-0">
           <span
             className={`
   transition-opacity duration-200
-  text-[14px] leading-[1.45]
+  text-[14px] leading-[1.6]
   text-center
+  whitespace-nowrap
   ${fade ? "opacity-0" : "opacity-100"}
   ${messages[index].font}
 `}
-
           >
             {messages[index].content}
           </span>
@@ -101,7 +101,7 @@ export default function TopBar() {
         {/* RIGHT */}
         <button
           onClick={() => change("next")}
-          className="flex items-center justify-center hover:opacity-70"
+          className="flex items-center justify-center hover:opacity-70 flex-shrink-0 w-8 h-8"
         >
           <ArrowRight />
         </button>

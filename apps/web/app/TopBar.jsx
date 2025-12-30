@@ -86,13 +86,12 @@ export default function TopBar() {
         <div className="flex items-center justify-center flex-1 px-4 min-w-0">
           <span
             className={`
-    transition-opacity duration-200
-    text-[14px] leading-[30px]
-    text-center
-    whitespace-nowrap
-    ${fade ? "opacity-0" : "opacity-100"}
-    ${messages[index].font}
-  `}
+  transition-opacity duration-200
+  text-[14px] leading-relaxed
+  text-center
+  ${fade ? "opacity-0" : "opacity-100"}
+  ${messages[index].font}
+`}
           >
             {messages[index].content}
           </span>

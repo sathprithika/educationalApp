@@ -123,28 +123,26 @@
 
 
 
-
 @keyframes scrollText {
   0% {
-    transform: translateX(0%);
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(-100%);
   }
 }
 
-/* Mobile & Tablet → smooth scrolling when space is tight */
+/* Mobile & Tablet */
 @media (max-width: 768px) {
   .animate-scroll-mobile {
-    animation: scrollText 8s linear infinite;
-    padding-left: 100%;
+    animation: scrollText 10s linear infinite;
+    display: inline-block;
   }
 }
 
-/* Desktop → no movement */
+/* Desktop */
 @media (min-width: 769px) {
   .animate-scroll-mobile {
     animation: none;
-    padding-left: 0;
   }
 }

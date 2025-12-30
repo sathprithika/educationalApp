@@ -29,7 +29,7 @@ const ArrowRight = () => (
 export default function TopBar() {
   const messages = [
     {
-      content: "Shop more, save more! Free shipping on orders above ₹999",
+      content: "Buy More, Save More – Enjoy Free Shipping on Orders Over ₹999!",
       font: "jakarta-font",
     },
     {
@@ -61,7 +61,7 @@ export default function TopBar() {
 
   return (
     <div
-      className="relative w-full min-h-[36px] py-[6px] overflow-hidden"
+      className="relative w-full min-h-[40px] py-[6px] overflow-hidden"
       style={{ backgroundColor: "#7a12fa", color: "#ffffff" }}
     >
       {/* GRAIN */}
@@ -86,12 +86,13 @@ export default function TopBar() {
         <div className="flex items-center justify-center flex-1 px-4 min-w-0">
           <span
             className={`
-  transition-opacity duration-200
-  text-[14px] leading-relaxed
-  text-center
-  ${fade ? "opacity-0" : "opacity-100"}
-  ${messages[index].font}
-`}
+    transition-opacity duration-200
+    text-[14px] leading-[30px]
+    text-center
+    whitespace-nowrap
+    ${fade ? "opacity-0" : "opacity-100"}
+    ${messages[index].font}
+  `}
           >
             {messages[index].content}
           </span>

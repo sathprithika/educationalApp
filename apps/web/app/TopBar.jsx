@@ -83,19 +83,20 @@ export default function TopBar() {
         </button>
 
         {/* TEXT */}
-        <div className="flex items-center justify-center flex-1 px-4 min-w-0">
+        <div className="relative flex items-center flex-1 px-4 min-w-0 overflow-hidden">
           <span
-            className={`
+  className={`
     transition-opacity duration-200
     text-[14px] leading-[30px]
     text-center
     whitespace-nowrap
+    inline-block
     ${fade ? "opacity-0" : "opacity-100"}
     ${messages[index].font}
+    animate-scroll-mobile
   `}
-          >
-            {messages[index].content}
-          </span>
+>
+</span>
         </div>
 
         {/* RIGHT */}

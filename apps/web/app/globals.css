@@ -120,3 +120,31 @@
 .geist-mono {
   font-family: "Geist Mono", monospace;
 }
+
+
+
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Mobile & Tablet → smooth scrolling when space is tight */
+@media (max-width: 768px) {
+  .animate-scroll-mobile {
+    animation: scrollText 8s linear infinite;
+    padding-left: 100%;
+  }
+}
+
+/* Desktop → no movement */
+@media (min-width: 769px) {
+  .animate-scroll-mobile {
+    animation: none;
+    padding-left: 0;
+  }
+}

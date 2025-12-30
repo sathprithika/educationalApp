@@ -87,7 +87,7 @@ export default function TopBar() {
           <span
             className={`
     transition-opacity duration-200
-    text-[14px] leading-[30px]
+    text-[14px] leading-[35px]
     text-center
     whitespace-nowrap
     inline-block

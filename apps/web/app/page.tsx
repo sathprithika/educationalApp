@@ -1,11 +1,20 @@
 import React from "react";
+import TopBar from "./TopBar";
 
-export default function GrainBackground() {
+export default function Page() {
   return (
     <div
-      className="relative min-h-screen overflow-hidden"
-      style={{ backgroundColor: "#ffffff" }}
+      className="relative min-h-screen w-full overflow-hidden"
+      style={{ backgroundColor: "#f1f1f1" }}
     >
+
+
+      {/* TOP BAR */}
+      <div className="relative z-20">
+        <TopBar />
+      </div>
+
+
       {/* Heavy grain texture - Dark variant */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -33,7 +42,7 @@ export default function GrainBackground() {
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain3'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.5' numOctaves='5' seed='10'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain3)' opacity='0.35'/%3E%3C/svg%3E")`,
           opacity: 0.1,
           mixBlendMode: "overlay",
-        }}
+        }}                                                    
       />
 
       {/* Extra contrast grain layer */}

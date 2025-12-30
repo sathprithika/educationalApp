@@ -73,17 +73,17 @@ export default function TopBar() {
         }}
       />
 
-      <div className="relative z-10 flex items-center justify-between px-2 gap-2">
+      <div className="relative z-10 flex items-center px-2">
         {/* LEFT */}
         <button
           onClick={() => change("prev")}
-          className="flex items-center justify-center hover:opacity-70 flex-shrink-0 w-8 h-8"
+          className="absolute left-2 flex items-center justify-center hover:opacity-70 w-8 h-8"
         >
           <ArrowLeft />
         </button>
 
         {/* TEXT */}
-        <div className="relative flex items-center flex-1 px-4 min-w-0 overflow-hidden">
+        <div className="flex w-full items-center justify-center px-10 overflow-hidden">
           <span
             className={`
     transition-opacity duration-200
@@ -103,7 +103,7 @@ export default function TopBar() {
         {/* RIGHT */}
         <button
           onClick={() => change("next")}
-          className="flex items-center justify-center hover:opacity-70 flex-shrink-0 w-8 h-8"
+          className="absolute right-2 flex items-center justify-center hover:opacity-70 w-8 h-8"
         >
           <ArrowRight />
         </button>

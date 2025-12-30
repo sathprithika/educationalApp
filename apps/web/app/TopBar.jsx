@@ -33,14 +33,12 @@ export default function TopBar() {
       font: "jakarta-font",
     },
     {
-      type: "jsx",
       font: "jakarta-font",
       content: (
         <>
-          {" "}
           <span className="font-bold">Flat 30%</span>{" "}
           <span className="font-semibold">off on</span>{" "}
-          <span className="font-normal">winter collection</span>{" "}
+          <span className="font-normal">winter collection</span>
         </>
       ),
     },
@@ -58,12 +56,12 @@ export default function TopBar() {
           : (prev - 1 + messages.length) % messages.length
       );
       setFade(false);
-    }, 150);
+    }, 180);
   };
 
   return (
     <div
-      className="relative w-full h-[30px] overflow-hidden flex items-center"
+      className="relative w-full min-h-[40px] py-[6px] overflow-hidden"
       style={{ backgroundColor: "#7a12fa", color: "#ffffff" }}
     >
       {/* GRAIN */}
@@ -75,25 +73,25 @@ export default function TopBar() {
         }}
       />
 
-      <div className="relative z-10 grid grid-cols-[28px_1fr_28px] items-center h-full">
+      <div className="relative z-10 grid grid-cols-[32px_1fr_32px] items-center">
         {/* LEFT */}
         <button
           onClick={() => change("prev")}
-          className="flex items-center justify-center h-full hover:opacity-70"
+          className="flex items-center justify-center hover:opacity-70"
         >
           <ArrowLeft />
         </button>
 
         {/* TEXT */}
-        <div className="flex items-center justify-center overflow-hidden">
+        <div className="flex items-center justify-center px-2">
           <span
             className={`
-    transition-all duration-150
-    whitespace-nowrap text-center
-    text-[14px] leading-[1.3]
-    ${fade ? "opacity-0 translate-y-1" : "opacity-100 translate-y-0"}
-    ${messages[index].font}
-  `}
+              transition-opacity duration-200
+              text-[14px] leading-[1.45]
+              whitespace-nowrap text-center
+              ${fade ? "opacity-0" : "opacity-100"}
+              ${messages[index].font}
+            `}
           >
             {messages[index].content}
           </span>
@@ -102,7 +100,7 @@ export default function TopBar() {
         {/* RIGHT */}
         <button
           onClick={() => change("next")}
-          className="flex items-center justify-center h-full hover:opacity-70"
+          className="flex items-center justify-center hover:opacity-70"
         >
           <ArrowRight />
         </button>

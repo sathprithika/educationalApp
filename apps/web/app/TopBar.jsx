@@ -88,7 +88,7 @@ export default function TopBar() {
             className={`
     transition-opacity duration-200
     text-[14px] leading-[35px]
-    tracking-wide
+    tracking-[0.035em]
     text-center
     whitespace-nowrap
     inline-block

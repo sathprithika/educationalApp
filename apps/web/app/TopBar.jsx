@@ -61,7 +61,7 @@ export default function TopBar() {
 
   return (
     <div
-      className="relative w-full min-h-[36px] py-[8px] overflow-hidden"
+      className="relative w-full min-h-[36px] py-[6px] overflow-hidden"
       style={{ backgroundColor: "#7a12fa", color: "#ffffff" }}
     >
       {/* GRAIN */}
@@ -86,13 +86,13 @@ export default function TopBar() {
         <div className="flex items-center justify-center flex-1 px-4 min-w-0">
           <span
             className={`
-  transition-opacity duration-200
-  text-[14px] leading-[1.6]
-  text-center
-  whitespace-nowrap
-  ${fade ? "opacity-0" : "opacity-100"}
-  ${messages[index].font}
-`}
+    transition-opacity duration-200
+    text-[14px] leading-[30px]
+    text-center
+    whitespace-nowrap
+    ${fade ? "opacity-0" : "opacity-100"}
+    ${messages[index].font}
+  `}
           >
             {messages[index].content}
           </span>

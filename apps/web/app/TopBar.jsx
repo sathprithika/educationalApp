@@ -61,7 +61,7 @@ export default function TopBar() {
 
   return (
     <div
-      className="relative w-full min-h-[40px] py-[8px] overflow-hidden"
+      className="relative w-full min-h-[36px] py-[8px] overflow-hidden"
       style={{ backgroundColor: "#7a12fa", color: "#ffffff" }}
     >
       {/* GRAIN */}
